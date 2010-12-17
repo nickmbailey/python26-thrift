@@ -1,0 +1,13 @@
+--- a/lib/py/setup.py	2010-09-28 16:07:29.000000000 +0000
++++ b/lib/py/setup.py	2010-12-17 21:57:25.000000000 +0000
+@@ -25,8 +25,8 @@
+                           sources = ['src/protocol/fastbinary.c'],
+                           )
+ 
+-setup(name = 'Thrift',
+-      version = '0.1',
++setup(name = 'python26-thrift',
++      version = '0.5.0',
+       description = 'Thrift Python Libraries',
+       author = ['Thrift Developers'],
+       author_email = ['thrift-dev@incubator.apache.org'],
