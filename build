@@ -8,16 +8,19 @@ ORIG_NAME="thrift-0.5.0"
 NAME="python26-thrift"
 RELEASE=1
 PACKAGER="Nick Bailey - nick@riptano.com"
+DOC_FILES="README, LICENSE"
 REQUIRES=""
 BUILD_REQUIRES=""
 
 # copy to a directory for building
 cp -r $ORIG_NAME $NAME/
-#apply any patches
+# apply any patches
 for patch_file in patches/*
 do
     patch -p1 -d $NAME < $patch_file
 done
+# copy license to python dir
+cp $NAME/LICENSE $NAME/lib/py/
 
 # build rpms
 cd $NAME/lib/py/
@@ -25,7 +28,8 @@ python2.6 setup.py bdist_rpm \
         --python="python2.6" \
         --dist-dir="$CUR_DIR" \
         --release="$RELEASE" \
-        --packager="$PACKAGER" 
+        --packager="$PACKAGER" \
+        --doc-files="$DOC_FILES"
 cd ..
 
 rm -r "$CUR_DIR/$NAME"
