@@ -4,13 +4,13 @@ CUR_DIR=`dirname $0`
 CUR_DIR=`pwd $CUR_DIR`
 cd $CUR_DIR
 
-ORIG_NAME="thrift-0.5.0"
+ORIG_NAME="thrift-0.7.0"
 NAME="python26-thrift"
 RELEASE=1
 PACKAGER="Nick Bailey - nick@riptano.com"
 DOC_FILES="README, LICENSE"
-REQUIRES=""
-BUILD_REQUIRES=""
+REQUIRES="python26"
+BUILD_REQUIRES="python26-devel"
 
 # copy to a directory for building
 cp -r $ORIG_NAME $NAME/
