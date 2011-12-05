@@ -1,1 +1,1 @@
-Run ./build to create the rpms
+Run rpmbuild -ba python26-thrift.spec to create the rpms
