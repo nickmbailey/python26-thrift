@@ -9,8 +9,8 @@ Url:		http://thrift.apache.org
 Source0:	http://www.apache.org/dist/thrift/%{version}/thrift-%{version}.tar.gz
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 
-BuildRequires:	python26-devel
-Requires:	python26
+BuildRequires:	%{_libdir}/libpython2.6.so
+Requires:	/usr/bin/python2.6
 
 %global __python python2.6
 %global python26_sitelib %(%{__python} -c "from distutils.sysconfig import get_python_lib; print(get_python_lib(True))")
